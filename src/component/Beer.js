@@ -7,15 +7,16 @@ function Beer(props) {
     return(
         <React.Fragment>
           
-            <div onClick ={() => props.whenTicketClicked(props.id)}>
-
-                
-            </div>
+            <div onClick ={() => props.whenBeerClicked(props.id)}>
             <h3>Beer Name:{props.name}</h3>
             <h5>Beer Brand:{props.brand}</h5>
             <h4>Beer Price:{props.price}</h4>
             <h5>Alcohol Content:{props.alcoholContent}</h5>
        
+
+
+            </div>
+            
 
         </React.Fragment>
     )
@@ -29,6 +30,7 @@ Beer.propTypes = {
     description: PropTypes.string,
     price: PropTypes.string,
     id: PropTypes.string,
+    whenBeerClicked: PropTypes.func
 
 }
 
