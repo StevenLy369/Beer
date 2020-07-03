@@ -1,6 +1,8 @@
 import React from 'react';
 import BeerList from './BeerList'
 import BeerForm from './BeerForm'
+import PropTypes from 'prop-types';
+import { v4 } from 'uuid';
 
 
 
@@ -39,7 +41,7 @@ class BeerControl extends React.Component {
     
      
          if (this.state.formVisibleOnPage) {
-          currentlyVisibleState = <BeerForm onNewBeer={this.handleBeerSubmission} />
+          currentlyVisibleState = <BeerForm onNewBeerCreation={this.handleBeerSubmission} />
           buttonText = "View Kegs";
         } else {
           currentlyVisibleState = <BeerList beerList={this.state.masterBeerList} />
@@ -58,6 +60,7 @@ class BeerControl extends React.Component {
 
  
 }
+
  
  
 export default BeerControl;

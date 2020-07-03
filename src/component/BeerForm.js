@@ -7,8 +7,7 @@ function BeerForm(props) {
 
     function handleBeerSubmission(event){
         event.preventDefault();
-        // console.log("hi im working");
-        props.onNewBeer({
+        props.onNewBeerCreation({
             name: event.target.beerName.value,
             brand: event.target.beerName.value,
             price: event.target.beerPrice.value,
@@ -17,8 +16,7 @@ function BeerForm(props) {
             id: v4()
         })
 
-        // console.log(event.target.beerName.value);
-        // console.log( event.target.beerName.value,)
+       
     }
 
 
@@ -43,7 +41,7 @@ function BeerForm(props) {
     
 }
 BeerForm.prototype = {
-    onNewBeer: PropTypes.func
+    onNewBeerCreation: PropTypes.func
 }
 
 
