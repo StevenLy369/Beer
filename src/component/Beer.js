@@ -7,7 +7,10 @@ function Beer(props) {
     return(
         <React.Fragment>
           
-            
+            <div onClick ={() => props.whenTicketClicked(props.id)}>
+
+                
+            </div>
             <h3>Beer Name:{props.name}</h3>
             <h5>Beer Brand:{props.brand}</h5>
             <h4>Beer Price:{props.price}</h4>

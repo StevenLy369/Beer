@@ -9,12 +9,13 @@ function BeerList(props){
             <hr/>
             {props.beerList.map((beer) =>
             <Beer
-            
+            whenBeerClicked = {props.onBeerSelection}
             name={beer.name}
             brand={beer.brand}
             price={beer.price}
             alcoholContent={beer.alcoholContent}
-            key={index}
+            id={beer.id}
+            key={beer.id}
             />)}
 
         </React.Fragment>
@@ -22,7 +23,8 @@ function BeerList(props){
 }
     
     BeerList.propTypes = {
-       beerList: PropTypes.array
+       beerList: PropTypes.array,
+       onBeerSelection: PropTypes.func
     } 
     
 

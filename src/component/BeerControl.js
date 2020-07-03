@@ -36,7 +36,7 @@ class BeerControl extends React.Component {
     }
 
     handleChangingSelectedBeer = (id) =>{
-        const selectedBeer = this.state.masterBeerList.filter(ticket => ticket.id === id)[0];
+        const selectedBeer = this.state.masterBeerList.filter(beer => beer.id === id)[0];
         this.setState({selectedBeer: selectedBeer});
     }
 
@@ -49,7 +49,7 @@ class BeerControl extends React.Component {
      
 
         if(this.state.selectedBeer !=null){
-            currentlyVisibleState = <BeerDetail beer={this.state.selectedBeer} />
+            currentlyVisibleState = <BeerDetail beer ={this.state.selectedBeer} />
             buttonText = "Return to Beer List"
         }
          else if (this.state.formVisibleOnPage) {
