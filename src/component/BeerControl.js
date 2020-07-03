@@ -11,9 +11,14 @@ class BeerControl extends React.Component {
         this.state = {
             masterBeerList: [],
             formVisibleOnPage: false,
-            selectedBeer:null,
-            edit:false
+            
+            
         }
+    }
+
+    handleClick = () => {
+        this.setState((prevState) => ({
+            formVisibleOnPage: !prevState.formVisibleOnPage }))
     }
 
 
@@ -27,17 +32,21 @@ render() {
 
     if (this.state.formVisibleOnPage){
         currentlyVisibleState = <BeerForm />
+        buttonText ="Add Beer"
     }else {
         currentlyVisibleState = <BeerList />
+        buttonText ="Return to Beer List"
     }
 
    
     return(
+
     <React.Fragment>
     {currentlyVisibleState}
-    <button onClick={this.handleClick}>{buttonText}</button>}
+    <button onClick={this.handleClick}>{buttonText}</button>
     </React.Fragment>
-)
+
+    );
  }
 
  
