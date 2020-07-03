@@ -23,7 +23,7 @@ class BeerControl extends React.Component {
             formVisibleOnPage: !prevState.formVisibleOnPage }))
     }
 
-    handleNewBeer = (newBeer) => {
+    handleNewBeerToList = (newBeer) => {
         const newMasterBeerList = this.state.masterBeerList.concat(newBeer);
         this.setState({
             masterBeerList: newMasterBeerList,
@@ -41,11 +41,11 @@ class BeerControl extends React.Component {
     
      
          if (this.state.formVisibleOnPage) {
-          currentlyVisibleState = <BeerForm onNewBeerCreation={this.handleBeerSubmission} />
-          buttonText = "View Kegs";
+          currentlyVisibleState = <BeerForm onNewBeerCreation={this.handleNewBeerToList} />
+          buttonText = "View Beer";
         } else {
           currentlyVisibleState = <BeerList beerList={this.state.masterBeerList} />
-          buttonText = "Add Keg";
+          buttonText = "Add Beer";
         }
    
     return(

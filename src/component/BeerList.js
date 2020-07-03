@@ -3,13 +3,10 @@ import PropTypes from 'prop-types';
 import Beer from './Beer';
 
 
-
-
-
-
 function BeerList(props){
     return(
         <React.Fragment>
+            <hr/>
             {props.beerList.map((beer,index) =>
             <Beer
             
