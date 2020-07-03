@@ -8,10 +8,10 @@ function Beer(props) {
         <React.Fragment>
           
             
-            <h3>{props.name}</h3>
-            <h5>{props.brand}</h5>
-            <h4>{props.price}</h4>
-            <h5>{props.alcoholContent}</h5>
+            <h3>Beer Name:{props.name}</h3>
+            <h5>Beer Brand:{props.brand}</h5>
+            <h4>Beer Price:{props.price}</h4>
+            <h5>Alcohol Content:{props.alcoholContent}</h5>
        
 
         </React.Fragment>
