@@ -10,9 +10,9 @@ function BeerList(props){
             {props.beerList.map((beer,index) =>
             <Beer
             
-            beerName={beer.name}
-            beerBrand={beer.brand}
-            beerPrice={beer.price}
+            name={beer.name}
+            brand={beer.brand}
+            price={beer.price}
             alcoholContent={beer.alcoholContent}
             key={index}
             />)}
