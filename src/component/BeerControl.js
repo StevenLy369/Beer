@@ -3,6 +3,7 @@ import BeerList from './BeerList'
 import BeerForm from './BeerForm'
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
+import BeerDetail from './BeerDetail'
 
 
 
@@ -13,6 +14,7 @@ class BeerControl extends React.Component {
         this.state = {
             masterBeerList: [],
             formVisibleOnPage: false,
+            selectedBeer:null
             
             
         }
@@ -33,6 +35,11 @@ class BeerControl extends React.Component {
 
     }
 
+    handleChangingSelectedBeer = (id) =>{
+        const selectedBeer = this.state.masterBeerList.filter(ticket => ticket.id === id)[0];
+        this.setState({selectedBeer: selectedBeer});
+    }
+
 
 
     render() {
@@ -40,11 +47,16 @@ class BeerControl extends React.Component {
         let buttonText = null;
     
      
-         if (this.state.formVisibleOnPage) {
+
+        if(this.state.selectedBeer !=null){
+            currentlyVisibleState = <BeerDetail beer={this.state.selectedBeer} />
+            buttonText = "Return to Beer List"
+        }
+         else if (this.state.formVisibleOnPage) {
           currentlyVisibleState = <BeerForm onNewBeerCreation={this.handleNewBeerToList} />
           buttonText = "View Beer";
         } else {
-          currentlyVisibleState = <BeerList beerList={this.state.masterBeerList} />
+          currentlyVisibleState = <BeerList beerList={this.state.masterBeerList} onBeerSelection={this.handleChangingSelectedBeer} />
           buttonText = "Add Beer";
         }
    

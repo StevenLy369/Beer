@@ -7,7 +7,7 @@ function BeerList(props){
     return(
         <React.Fragment>
             <hr/>
-            {props.beerList.map((beer,index) =>
+            {props.beerList.map((beer) =>
             <Beer
             
             name={beer.name}

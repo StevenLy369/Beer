@@ -1,13 +1,13 @@
 import React from 'react';
 
-function TicketDetails(props){
+function BeerDetail(props){
     return(
         <React.Fragment>
-            <h1>Ticket Detail</h1>
+            <h1>Beer Detail</h1>
             <hr/>
         </React.Fragment>
     )
 }
 
 
-export default TicketDetails;
+export default BeerDetail;
