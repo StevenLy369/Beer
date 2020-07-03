@@ -21,8 +21,17 @@ class BeerControl extends React.Component {
     }
 
     handleClick = () => {
-        this.setState((prevState) => ({
-            formVisibleOnPage: !prevState.formVisibleOnPage }))
+        if(this.state.selectedBeer !=null){
+            this.setState({
+                formVisibleOnPage:false,
+                selectedBeer:null
+            })
+        }else{
+            this.setState(prevState => ({
+                formVisibleOnPage: !prevState.formVisibleOnPage,
+            }))
+        }
+       
     }
 
     handleNewBeerToList = (newBeer) => {
