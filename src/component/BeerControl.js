@@ -33,21 +33,18 @@ class BeerControl extends React.Component {
 
 
 
-render() {
-    let currentlyVisibleState = null;
-    let buttonText = null;
-
-
-
-
-    if (this.state.formVisibleOnPage){
-        currentlyVisibleState = <BeerForm onNewBeer={this.handleNewBeer} />
-        buttonText ="Return to List"
-    }else {
-        currentlyVisibleState = <BeerList beerList={this.state.masterKegList}/>
-        buttonText ="Add Beer"
-    }
-
+    render() {
+        let currentlyVisibleState = null;
+        let buttonText = null;
+    
+     
+         if (this.state.formVisibleOnPage) {
+          currentlyVisibleState = <BeerForm onNewBeer={this.handleBeerSubmission} />
+          buttonText = "View Kegs";
+        } else {
+          currentlyVisibleState = <BeerList beerList={this.state.masterBeerList} />
+          buttonText = "Add Keg";
+        }
    
     return(
 

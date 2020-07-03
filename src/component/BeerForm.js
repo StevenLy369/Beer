@@ -7,6 +7,7 @@ function BeerForm(props) {
 
     function handleBeerSubmission(event){
         event.preventDefault();
+        // console.log("hi im working");
         props.onNewBeer({
             name: event.target.beerName.value,
             brand: event.target.beerName.value,
@@ -15,6 +16,9 @@ function BeerForm(props) {
             pints: 124,
             id: v4()
         })
+
+        // console.log(event.target.beerName.value);
+        // console.log( event.target.beerName.value,)
     }
 
 

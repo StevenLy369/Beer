@@ -5,26 +5,27 @@ import Beer from './Beer';
 
 
 
-const beerArray=[];
+
 
 function BeerList(props){
     return(
         <React.Fragment>
-            {beerArray.map((beer,index) =>
+            {props.beerList.map((beer) =>
             <Beer
-            beerName={beer.beerName}
-            beerBrand={beer.beerBrand}
-            beerPrice={beer.beerPrice}
+            
+            beerName={beer.name}
+            beerBrand={beer.brand}
+            beerPrice={beer.price}
             alcoholContent={beer.alcoholContent}
-            key={index} />
-
-            )}
+            key={beer.id}
+            />)}
 
         </React.Fragment>
     )
 }
 BeerList.propTypes = {
-    beerList: PropTypes.array
+    beerList: PropTypes.array,
+    
 }
 
 
