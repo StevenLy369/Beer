@@ -6,7 +6,7 @@ function Header(){
     return(
         <React.Fragment>
 
-            <h1>B</h1>
+            <h1>Worlds Most Boring Beer Store!</h1>
         </React.Fragment>
     )
 }
