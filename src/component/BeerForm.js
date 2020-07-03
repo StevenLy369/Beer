@@ -12,7 +12,7 @@ function BeerForm() {
             <input type='text' name='beerBrand' placeholder='Enter Beer Brand'/>
             <input type='number' name='beerPrice' placeholder='Enter Beer Cost'/>
             <input type='number' name='alcoholContent' placeholder='Enter Alcohol Content'/>
-            <button type='submit'>Help</button>
+            <button type='submit'>Submit</button>
         </form>
 
             
